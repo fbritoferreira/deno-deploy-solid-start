@@ -1,0 +1,33 @@
+name: 'Solid Start Deploy to Deno Deploy'
+description: 'Deploy your Solid Start app to Deno Deploy'
+branding:
+  icon: 'cloud'
+  color: 'blue'
+inputs:
+  token:
+    description: 'Deno Deploy token'
+    required: true
+  build:
+    description: 'Should we build the app?'
+    required: false
+    default: true
+  deploy:
+    description: 'Should we deploy the app?'
+    required: false
+    default: true
+  project:
+    description: 'The path to the project relative to the root of the repository'
+    required: true
+  install:
+    description: 'Should we install dependencies?'
+    required: false
+    default: true
+runs:
+  using: docker
+  image: 'Dockerfile'
+  env:
+    DENO_DEPLOY_TOKEN: ${{ inputs.token }}
+    BUILD: ${{ inputs.build }}
+    DEPLOY: ${{ inputs.deploy }}
+    PROJECT: ${{ inputs.project }}
+    INSTALL: ${{ inputs.install }}
