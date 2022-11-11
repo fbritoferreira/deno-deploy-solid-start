@@ -4,7 +4,12 @@ env:
   DENO_DEPLOY_TOKEN: ${{ secrets.DENO_DEPLOY_TOKEN }}
 
 on:
-  pull_request:
+  push:
+    branches:
+      - main
+      - releases/*
+    paths-ignore:
+      - '**.md'
 
 jobs:
   build:
@@ -17,5 +22,5 @@ jobs:
           token: ${{ secrets.DENO_DEPLOY_TOKEN }}
           project: 'example'
           build: true
-          deploy: false
+          deploy: true
           install: true
