@@ -9,29 +9,14 @@ Requirements:
 
 
 ## Inputs
-
-## `project`
-
-**Required** The path of your project, this enables monorepo suport. Default `.`.
-
-## `token`
-
-**Required** The token of your deno deploy account.
-
-## `build`
-
-Wether to build your app before deploying. Expected command `yarn build`. Default `true`.
-
-## `deploy`
-
-Wether to deploy your app to deno deploy. Expected command `yarn deploy`. Default `true`.
-
-## `install`
-
-Wether to run `yarn install`. Default `true`.
+ - `project`: The path of your project, this enables monorepo suport. Default `.`.
+ - `token`: **Required** The token of your deno deploy account.
+ - `build`: Wether to build your app before deploying. Expected command `yarn build`. Default `true`.
+ - `deploy`: Wether to deploy your app to deno deploy. Expected command `yarn deploy`. Default `true`.
+ - `install`: Wether to run `yarn install`. Default `true`.
 
 ## Example usage
-
+```yaml
 uses: @fbritoferreira/deno-deploy-solid-start@v1
 with:
   token: ${{ secrets.DENO_DEPLOY_TOKEN }}
@@ -39,3 +24,4 @@ with:
   build: true
   deploy: true
   install: true
+```

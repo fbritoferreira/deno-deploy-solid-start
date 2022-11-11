@@ -17,7 +17,6 @@ inputs:
     default: true
   project:
     description: 'The path to the project relative to the root of the repository'
-    required: true
     default: '.'
   install:
     description: 'Should we install dependencies?'
