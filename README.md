@@ -17,6 +17,10 @@ Requirements:
 
 ## Example usage
 ```yaml
+
+env:
+  DENO_DEPLOY_TOKEN: ${{ secrets.DENO_DEPLOY_TOKEN }}
+
 uses: fbritoferreira/deno-deploy-solid-start@v1
 with:
   token: ${{ secrets.DENO_DEPLOY_TOKEN }}
