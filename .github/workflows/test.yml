@@ -20,7 +20,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Deno deploy Solid Start
-        uses: @fbritoferreira/deno-deploy-solid-start@v1
+        uses: fbritoferreira/deno-deploy-solid-start@v1
         with:
           token: ${{ secrets.DENO_DEPLOY_TOKEN }}
       - run: deno --version

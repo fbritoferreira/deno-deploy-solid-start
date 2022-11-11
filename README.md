@@ -17,7 +17,7 @@ Requirements:
 
 ## Example usage
 ```yaml
-uses: @fbritoferreira/deno-deploy-solid-start@v1
+uses: fbritoferreira/deno-deploy-solid-start@v1
 with:
   token: ${{ secrets.DENO_DEPLOY_TOKEN }}
   project: ./packages/my-app
