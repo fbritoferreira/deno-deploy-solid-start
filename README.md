@@ -4,7 +4,7 @@ This action prints setups all you need to deploy your solid start app to deno de
 
 Requirements:
 - Deno Deploy Account
-- Solid Start app with deno adapter (instructions here)[https://github.com/solidjs/solid-start/tree/main/packages/start-deno]
+- Solid Start app with deno adapter [instructions here](https://github.com/solidjs/solid-start/tree/main/packages/start-deno)
 - Create a deploy command in your package.json (e.g `cd dist && deployctl deploy --prod --project=<YOUR_PROJECT_NAME> --token <YOUR_DENO_DEPLOY_TOKEN> ./index.js"`)
 
 
