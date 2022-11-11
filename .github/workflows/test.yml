@@ -23,6 +23,7 @@ jobs:
         uses: fbritoferreira/deno-deploy-solid-start@v1
         with:
           token: ${{ secrets.DENO_DEPLOY_TOKEN }}
-      - run: deno --version
-      - run: node --version
-      - run: yarn --version
+          project: 'example'
+          build: true
+          deploy: true
+          install: true
