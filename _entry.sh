@@ -13,7 +13,7 @@ if [ "${BUILD}" = true ]; then
   yarn build
 fi
 
-if [ "${DEPLOY}" = true ] && [ -z ${DENO_DEPLOY_TOKEN} ]; then
+if [ "${DEPLOY}" = true ]; then
   echo "Deploying to deno deploy"
   yarn deploy
 fi
