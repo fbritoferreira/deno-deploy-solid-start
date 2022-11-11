@@ -1,0 +1,28 @@
+name: build-test
+
+env:
+  DENO_DEPLOY_TOKEN: ${{ secrets.DENO_DEPLOY_TOKEN }}
+
+on:
+  pull_request:
+    paths-ignore:
+      - '**.md'
+  push:
+    branches:
+      - main
+      - releases/*
+    paths-ignore:
+      - '**.md'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Deno deploy Solid Start
+        uses: @fbritoferreira/deno-deploy-solid-start@v1
+        with:
+          token: ${{ secrets.DENO_DEPLOY_TOKEN }}
+      - run: deno --version
+      - run: node --version
+      - run: yarn --version
