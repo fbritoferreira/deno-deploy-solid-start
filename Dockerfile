@@ -1,3 +1,3 @@
-FROM ghcr.io/fbritoferreira/deno-deploy-solid-start:v1.1.1
+FROM ghcr.io/fbritoferreira/deno-deploy-solid-start:latest
 
 ENTRYPOINT ["/tini", "--", "docker-entrypoint.sh"]
