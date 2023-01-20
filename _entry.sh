@@ -5,15 +5,15 @@ cd ${PROJECT}
 
 if [ "${INSTALL}" = true ]; then
   echo "Installing dependencies"
-  yarn install
+  ${PACKAGE_MANAGER} install
 fi
 
 if [ "${BUILD}" = true ]; then
   echo "Building project"
-  yarn build
+  ${PACKAGE_MANAGER} build
 fi
 
 if [ "${DEPLOY}" = true ]; then
   echo "Deploying to deno deploy"
-  yarn deploy
+  ${PACKAGE_MANAGER} deploy
 fi

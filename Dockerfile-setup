@@ -25,7 +25,8 @@ ENV DENO_VERSION=${DENO_VERSION}
 COPY --from=bin /deno /bin/deno
 
 COPY --from=tini /tini /tini
-RUN apk add --no-cache -U nodejs yarn
+RUN apk add --no-cache -U nodejs yarn wget
+RUN wget -qO /bin/pnpm "https://github.com/pnpm/pnpm/releases/latest/download/pnpm-linuxstatic-x64" && chmod +x /bin/pnpm
 RUN deno install --allow-read --allow-write --allow-env --allow-net --allow-run --no-check -r -f https://deno.land/x/deploy/deployctl.ts
 
 COPY ./_entry.sh /usr/local/bin/docker-entrypoint.sh

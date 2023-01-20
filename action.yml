@@ -22,6 +22,10 @@ inputs:
     description: 'Should we install dependencies?'
     required: false
     default: true
+  package_manager:
+    description: 'The package manager to use'
+    required: false
+    default: 'yarn'
 runs:
   using: docker
   image: 'Dockerfile'
@@ -31,3 +35,4 @@ runs:
     DEPLOY: ${{ inputs.deploy }}
     PROJECT: ${{ inputs.project }}
     INSTALL: ${{ inputs.install }}
+    PACKAGE_MANAGER: ${{ inputs.package_manager }
