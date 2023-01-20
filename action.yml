@@ -35,4 +35,4 @@ runs:
     DEPLOY: ${{ inputs.deploy }}
     PROJECT: ${{ inputs.project }}
     INSTALL: ${{ inputs.install }}
-    PACKAGE_MANAGER: ${{ inputs.package_manager }
+    PACKAGE_MANAGER: ${{ inputs.package_manager }}
