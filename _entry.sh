@@ -10,10 +10,10 @@ fi
 
 if [ "${BUILD}" = true ]; then
   echo "Building project"
-  ${PACKAGE_MANAGER} build
+  ${PACKAGE_MANAGER} run build
 fi
 
 if [ "${DEPLOY}" = true ]; then
   echo "Deploying to deno deploy"
-  ${PACKAGE_MANAGER} deploy
+  ${PACKAGE_MANAGER} run deploy
 fi
